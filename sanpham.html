@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Sản phẩm</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<div class="logo">Shop Tuấn Emm</div>
+
+<a href="danhmuc.html">📂 Quản lý danh mục</a>
+<a href="sanpham.html">📦 Quản lý sản phẩm</a>
+
+</div>
+
+<div class="header">
+
+<h3>Hệ thống quản lý</h3>
+
+<div class="avatar">
+<img src="avatar.jpg">
+<span>Tuấn Chủ shop</span>
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="cards">
+
+<div class="card">
+<h3>Tổng sản phẩm</h3>
+<p>25</p>
+</div>
+
+<div class="card">
+<h3>Danh mục</h3>
+<p>5</p>
+</div>
+
+<div class="card">
+<h3>Đơn hàng</h3>
+<p>10</p>
+</div>
+
+</div>
+
+<div class="container">
+
+<h2>Quản lý sản phẩm</h2>
+
+<form>
+
+<div class="form-group">
+<label>Mã sản phẩm</label>
+<input type="text" id="masp">
+</div>
+
+<div class="form-group">
+<label>Tên sản phẩm</label>
+<input type="text" id="tensp">
+</div>
+
+<div class="form-group">
+<label>Giá</label>
+<input type="number" id="gia">
+</div>
+
+<div class="form-group">
+<label>Danh mục</label>
+<select id="danhmuc">
+<option>Điện thoại</option>
+<option>Laptop</option>
+<option>Phụ kiện</option>
+</select>
+</div>
+
+<div class="form-group">
+<label>Hình ảnh</label>
+<input type="file">
+</div>
+
+<div class="form-group">
+<label>Mô tả</label>
+<textarea rows="3"></textarea>
+</div>
+
+<button type="button" class="add" onclick="themSanPham()">
+Thêm sản phẩm
+</button>
+</form>
+
+<table id="bangsanpham">
+
+<tr>
+<th>Mã</th>
+<th>Tên</th>
+<th>Giá</th>
+<th>Danh mục</th>
+</tr>
+</table>
+<tr>
+<td>SP01</td>
+<td>Iphone 15</td>
+<td>25000000</td>
+<td>Điện thoại</td>
+</tr>
+
+<tr>
+<td>SP02</td>
+<td>Dell XPS</td>
+<td>35000000</td>
+<td>Laptop</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+<script>
+
+function themSanPham(){
+
+var masp = document.getElementById("masp").value;
+var tensp = document.getElementById("tensp").value;
+var gia = document.getElementById("gia").value;
+var danhmuc = document.getElementById("danhmuc").value;
+
+var bang = document.getElementById("bangsanpham");
+
+var row = bang.insertRow();
+
+row.insertCell(0).innerHTML = masp;
+row.insertCell(1).innerHTML = tensp;
+row.insertCell(2).innerHTML = gia;
+row.insertCell(3).innerHTML = danhmuc;
+
+}
+</script>
+</body>
+</html>
